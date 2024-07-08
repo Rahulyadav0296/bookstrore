@@ -1,0 +1,44 @@
+.bookstore {
+  display: flex; /* Use flexbox to align the content */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  width: 400px; /* Reduce the width for a smaller appearance */
+  margin: 20px auto; /* Center horizontally and provide some top/bottom margin */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for better visualization */
+}
+
+.input-field {
+  width: calc(100% - 20px); /* Make sure it fits within the reduced width */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  margin-bottom: 15px; /* Add some space below the input */
+}
+
+.input-field:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.add-book-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-book-btn:hover {
+  background-color: #0056b3;
+}

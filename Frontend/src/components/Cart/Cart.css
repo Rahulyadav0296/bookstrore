@@ -1,0 +1,157 @@
+/* Cart.css */
+
+/* Container for the entire cart */
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f5cf96; /* Slightly lighter background */
+  font-family: "Arial", sans-serif; /* Modern font */
+}
+
+/* Individual cart item */
+.cart-item {
+  display: inline;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 800px; /* Limit the width of cart items */
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #08003f;
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 12px; /* More pronounced rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Slightly more pronounced shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transform and shadow effect */
+}
+
+.cart-item:hover {
+  transform: translateY(-5px) scale(1.02); /* Lift up and slightly scale on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* More intense shadow on hover */
+}
+
+/* Image of the cart item */
+.cart-item-image {
+  width: 120px; /* Slightly larger image */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 20px; /* Space between image and details */
+  border-radius: 8px; /* More pronounced rounded corners for images */
+  object-fit: cover; /* Cover to keep image within bounds */
+  transition: transform 0.3s ease; /* Smooth transform effect */
+}
+
+.cart-item-image:hover {
+  transform: scale(1.05); /* Slightly zoom in on hover */
+}
+
+/* Container for cart item details */
+.cart-item-details {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Allow to take up remaining space */
+}
+
+/* Title of the cart item */
+.cart-item-title {
+  font-size: 1.6rem; /* Large title */
+  font-weight: 700;
+  margin-bottom: 10px; /* Space below the title */
+  color: #fff; /* Darker text color */
+}
+
+/* Author of the cart item */
+.cart-item-author {
+  font-size: 1rem;
+  color: #fff; /* Medium-dark text color */
+  margin-bottom: 8px; /* Space below the author */
+}
+
+/* Price of the cart item */
+.cart-item-price {
+  font-size: 1.2rem; /* Slightly larger text */
+  color: #ff6f61; /* Highlight price with a color */
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* Quantity of the cart item */
+.cart-item-quantity {
+  font-size: 1rem;
+  color: #fff; /* Lighter text color */
+  margin-bottom: 8px;
+}
+
+/* Genre of the cart item */
+.cart-item-genre {
+  font-size: 1rem;
+  color: #fff;
+}
+
+/* Buy Button */
+.buy-button {
+  align-items: center;
+  background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 19px 24px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.buy-button:hover {
+  background-color: #4cae4c;
+  transform: translateY(-2px); /* Slightly lift up on hover */
+}
+
+.total-price {
+  font-size: 1.6rem; /* Larger font */
+  font-weight: bold;
+  color: #333; /* Darker text color */
+  margin-top: 30px; /* More space at the top */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
+    padding: 20px; /* Increased padding for better spacing */
+  }
+
+  .cart-item-image {
+    width: 100%; /* Full width on smaller screens */
+    height: auto;
+    margin-right: 0; /* Remove side margin */
+    margin-bottom: 15px; /* Add bottom margin */
+  }
+
+  .cart-item-title {
+    font-size: 1.4rem; /* Slightly smaller title */
+    margin-bottom: 10px; /* Adjust spacing */
+  }
+
+  .total-price {
+    font-size: 1.3rem;
+  }
+
+  .buy-button {
+    width: 100%; /* Full width button on smaller screens */
+    text-align: center;
+  }
+}

@@ -1,0 +1,117 @@
+/* Base styling for the navigation bar */
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #08003f;
+  color: white;
+  top: 0;
+  padding: 10px 20px;
+  position: sticky;
+  z-index: 10;
+}
+
+/* Styling for the logo */
+.nav-logo {
+  height: 100px;
+}
+
+.nav-title,
+.nav-cart-b {
+  font-size: 25px;
+}
+
+/* Container for navigation links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+/* Links styling */
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+}
+
+/* Specific styling for the title link */
+.nav-title-link h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+/* Specific styling for the cart link */
+.nav-cart-link {
+  position: relative;
+  font-size: 1.2rem;
+}
+
+/* Badge for cart items */
+.cart-badge {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: red;
+  border-radius: 50%;
+  padding: 2px 5px;
+  font-size: 0.8rem;
+  color: white;
+}
+
+/* Button to toggle mobile menu */
+.nav-toggle-button {
+  display: none; /* Hidden by default */
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Toggle button icon styling */
+.nav-toggle-button i {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Show the close icon when the menu is open */
+.nav-toggle-button i.fa-times {
+  transform: rotate(90deg);
+}
+
+/* Media query to show toggle button and manage mobile menu behavior */
+@media (max-width: 768px) {
+  /* Hide the links by default on mobile */
+  .nav-links {
+    display: none;
+  }
+
+  /* Show links in a sliding panel when menu is open */
+  .nav-links.open {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: -100%; /* Initially off-screen to the right */
+    height: 100%;
+    width: 100px;
+    background-color: #08003f;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 1s ease-in-out; /* Smooth transition */
+    pointer-events: none;
+  }
+
+  /* When open, move the menu to be fully visible */
+  .nav-links.open {
+    right: 0; /* Slide into view from the right */
+    opacity: 1; /* Fade in to full opacity */
+    pointer-events: auto; /* Enable interactions */
+  }
+
+  /* Display the toggle button on mobile */
+  .nav-toggle-button {
+    display: block; /* Show the toggle button */
+  }
+}
